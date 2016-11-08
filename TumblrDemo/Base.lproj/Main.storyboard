@@ -105,24 +105,17 @@
                                 <frame key="frameInset" minX="-2" minY="318" width="377" height="117"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" image="login_form" id="tZx-UO-5db">
-                                <frame key="frameInset" minX="37" minY="303" width="300" height="132"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="cC0-me-wtM">
                                 <frame key="frameInset" minX="291" minY="38" width="76" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <segue destination="aKs-FH-oRw" kind="modal" animates="NO" id="6Zv-0h-9sE"/>
+                                </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" id="l74-jk-WRF">
-                                <frame key="frameInset" minX="46" minY="310" width="283" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="p65-LH-dc6"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D3t-01-ha2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -214,6 +207,64 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GAE-mJ-8Wl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="73.5" y="950.5"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="T4u-2H-Ubw">
+            <objects>
+                <viewController modalPresentationStyle="overCurrentContext" id="aKs-FH-oRw" customClass="loginViewController" customModule="TumblrDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vek-TO-kW1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" misplaced="YES" id="Ffz-q1-6FW">
+                                <frame key="frameInset" minY="239" width="375" height="185"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="login_form" id="U9X-Vg-x5S">
+                                        <frame key="frameInset" minX="37" minY="26" width="300" height="132"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" id="XYH-bw-Hep">
+                                        <frame key="frameInset" minX="46" minY="33" width="282" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" id="Gko-bu-PqE">
+                                        <frame key="frameInset" minX="46" minY="77" width="282" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="RS4-BJ-IiA">
+                                        <frame key="frameInset" minX="37" minY="115" width="150" height="43"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="modal" animates="NO" id="CTr-jB-24k"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="gCw-17-pun" appends="YES" id="jqP-sl-URJ"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="modalParent" destination="Ffz-q1-6FW" id="3xo-BA-3od"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="psu-Vf-Gy1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="gCw-17-pun">
+                    <connections>
+                        <action selector="didTap:" destination="aKs-FH-oRw" id="hAy-85-zM3"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="500.5" y="950.5"/>
         </scene>
         <!--Account View Controller-->
         <scene sceneID="xoW-PF-bLL">

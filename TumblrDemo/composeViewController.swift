@@ -100,19 +100,57 @@ class composeViewController: UIViewController {
         
     }
     
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        print("View disappeared")
+        
+        UIView.animate(withDuration: 0.5, delay: 0.1, options: .curveEaseInOut, animations: {
+            self.textButton.frame.origin.y = self.textButtonOriginalCenter - 800
+            
+            })
+            
+            
+            UIView.animate(withDuration: 0.5, delay: 0.2, options: .curveEaseInOut, animations: {
+                self.photoButton.frame.origin.y = self.photoButtonOriginalCenter - 800
+                
+            })
+            
+            UIView.animate(withDuration: 0.5, delay: 0.3, options: .curveEaseInOut, animations: {
+                self.linkButton.frame.origin.y = self.linkButtonOriginalCenter - 800
+                
+            })
+            
+            UIView.animate(withDuration: 0.5, delay: 0.4, options: .curveEaseInOut, animations: {
+                self.quoteButton.frame.origin.y = self.quoteButtonOriginalCenter - 800
+                
+            })
+            
+            UIView.animate(withDuration: 0.5, delay: 0.5, options: .curveEaseInOut, animations: {
+                self.chatButton.frame.origin.y = self.chatButtonOriginalCenter - 800
+                
+            })
+            
+            UIView.animate(withDuration: 0.5, delay: 0.6, options: .curveEaseInOut, animations: {
+                self.videoButton.frame.origin.y = self.videoButtonOriginalCenter - 800
+                
+            })
+            
+            
+        }
+
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-  
+        // Dispose of any resources that can be recreated.
     }
     
-
+    
     
     @IBAction func onDismissButton(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
-        
-
     }
     
-
 }
